@@ -1,6 +1,14 @@
 # Prerequisites
 *.d
 
+# Pastas
+.vs/
+x64/
+x32/
+x86/
+Debug/
+Release/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -30,3 +38,9 @@
 *.exe
 *.out
 *.app
+*.db
+*.vsidx
+*.lock
+*.db-shm
+*.db-wal
+*.opendb
