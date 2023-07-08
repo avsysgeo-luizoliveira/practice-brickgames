@@ -1,4 +1,5 @@
 #include "head.h"
+#include "CarCrash.h"
 
 int main()
 {
@@ -64,6 +65,7 @@ int main()
 
 		if (InputUser == VK_RETURN) // tecla enter ou Char 13
 		{
+			CarCrash Cars(hConsole);
 
 			// Precisamos fazer algo aqui :D
 
