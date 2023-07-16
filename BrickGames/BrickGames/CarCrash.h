@@ -8,6 +8,7 @@ struct Cars
 	int x = 0;
 	int y = 0;
 	char DesingChar = 'X';
+
 	
 	void Show(HANDLE hconsole, short x, short y) 
 	{
@@ -17,7 +18,6 @@ struct Cars
 		std::cout << DesingChar << DesingChar << DesingChar;
 		SetConsoleCurPos(hconsole, x, 2 + y - w);
 		std::cout << DesingChar << " " << DesingChar;
-
 	}
 
 };
@@ -29,13 +29,13 @@ class CarCrash
 protected:
 	HANDLE hC;
 	Cars Player;
+
 public:
 
 	CarCrash(HANDLE hConsole) {
 		hC = hConsole;
 		show();
 	}
-
 
 	void show();
 

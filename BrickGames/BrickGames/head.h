@@ -5,3 +5,10 @@
 #include <conio.h>  // Antiga Lib de console do windows
 // WINDOWS API 
 #include <Windows.h>
+
+// Randomize
+#include <random>
+// Precisão do cout
+#include <iomanip>
+// Precisão do Sleep
+#include <thread>

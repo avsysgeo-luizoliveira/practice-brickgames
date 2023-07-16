@@ -36,6 +36,9 @@ void CarCrash::show()
 			PlayerPosition.X++;
 
 
-		Sleep(66); // 15 fps
+		Sleep(33); // 15 fps
 	}
+
+
+
 }

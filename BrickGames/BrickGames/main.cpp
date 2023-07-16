@@ -1,5 +1,6 @@
 #include "head.h"
 #include "CarCrash.h"
+#include "Crash.h"
 
 int main()
 {
@@ -14,7 +15,7 @@ int main()
 	// Mecanismo de CENA BASICAS, isso é informar ao render se precisa limpar a tela e quando desenha um quadro novo
 	static bool ClearMenuFrame = false, RenderNextFrame = true;
 
-	std::vector<std::string> Games = { "Car Crash", "Options Or Nothing :)", "Exit" }; // Lista de opções
+	std::vector<std::string> Games = { "Car Crash", "Crash", "Options Or Nothing :)", "Exit" }; // Lista de opções
 	int IndexMenuSelected = 0; // Index de seleção do usuario
 
 	char InputUser; // Entrada do úsuario
@@ -65,8 +66,22 @@ int main()
 
 		if (InputUser == VK_RETURN) // tecla enter ou Char 13
 		{
-			CarCrash Cars(hConsole);
+			if(IndexMenuSelected == 0)
+				CarCrash Cars(hConsole);
 
+			if (IndexMenuSelected == 1)
+				Crash crash(hConsole);
+
+			if (IndexMenuSelected == Games.size() - 1)
+			{
+
+				std::cout << "Thanks for the play bye bye";
+				Sleep(100);
+				break;
+			}
+
+			RenderNextFrame = true;
+			ClearMenuFrame = true;
 			// Precisamos fazer algo aqui :D
 
 		}
