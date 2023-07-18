@@ -36,4 +36,12 @@ void SetConsoleColor(HANDLE hConsole, short colour)
 	SetConsoleTextAttribute(hConsole, colour); // Seta a coloração de maneira mais facil :)
 }
 
+int RandomNumber(int min, int max)
+{
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<> dis(min, max);
+	return dis(gen);
+}
+
 

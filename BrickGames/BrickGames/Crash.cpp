@@ -68,7 +68,6 @@ void Crash::show()
 
 		if (crash)
 		{
-
 			SetConsoleCurPos(hC, 0, h / 2);
 			std::cout << "|----------------|\n|  CRASH x" << std::fixed << std::setprecision(2) << randoMax / 9 << "   |\n|----------------|";
 
