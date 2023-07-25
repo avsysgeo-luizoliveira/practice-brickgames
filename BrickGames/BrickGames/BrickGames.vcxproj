@@ -130,6 +130,7 @@
     <ClInclude Include="CarCrash.h" />
     <ClInclude Include="Crash.h" />
     <ClInclude Include="head.h" />
+    <ClInclude Include="Snake.h" />
     <ClInclude Include="Teterianos.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
@@ -137,6 +138,7 @@
     <ClCompile Include="CarCrash.cpp" />
     <ClCompile Include="Crash.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Teterianos.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>

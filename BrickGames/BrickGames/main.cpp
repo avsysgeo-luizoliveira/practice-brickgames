@@ -2,6 +2,7 @@
 #include "CarCrash.h"
 #include "Crash.h"
 #include "Teterianos.h"
+#include "Snake.h"
 int main()
 {
 	// para os jogos é importante passar o hConsole pois vamos fazer telas dinamicas baseado em posição do console
@@ -15,7 +16,7 @@ int main()
 	// Mecanismo de CENA BASICAS, isso é informar ao render se precisa limpar a tela e quando desenha um quadro novo
 	static bool ClearMenuFrame = false, RenderNextFrame = true;
 
-	std::vector<std::string> Games = { "Car Crash", "Crash", "Tetriz", "Options Or Nothing :)", "Exit"}; // Lista de opções
+	std::vector<std::string> Games = { "Car Crash", "Crash", "Tetriz", "Snake", "Options Or Nothing :)", "Exit"}; // Lista de opções
 	int IndexMenuSelected = 0; // Index de seleção do usuario
 
 	char InputUser; // Entrada do úsuario
@@ -75,6 +76,8 @@ int main()
 			if (IndexMenuSelected == 2)
 				Teterianos Tetrus(hConsole);
 
+			if (IndexMenuSelected == 3)
+				Snake Cobra(hConsole);
 
 			if (IndexMenuSelected == Games.size() - 1)
 			{
