@@ -4,10 +4,8 @@
 
 void CarCrash::show()
 {
-
-
-
-	while (true) 
+	GameStating = true;
+	while (GameStating)
 	{
 		Clear(hC);
 
@@ -30,15 +28,22 @@ void CarCrash::show()
 		Player.Show(hC, PlayerPosition.X , PlayerPosition.Y);
 
 		// API DO WINDOWS MAS SE ENCONTRAR UMA MELHOR PARA INPUT MELHOR AINDA.
-		if (GetAsyncKeyState(Controller[0]) != 0)
+		if (GetAsyncKeyState(Controller[0]) != 0) {
 			PlayerPosition.X--;
-		if (GetAsyncKeyState(Controller[1]) != 0)
+			if (PlayerPosition.X == 1) { GameStating = false; CarCrash::GameHover(); }
+		}
+		if (GetAsyncKeyState(Controller[1]) != 0) {
 			PlayerPosition.X++;
-
-
+			if (PlayerPosition.X == 13) { GameStating = false; CarCrash::GameHover(); }
+		}
 		Sleep(33); // 15 fps
 	}
+}
 
-
-
+void CarCrash::GameHover() {
+	while (true) {
+		Clear(hC);
+		std::cout << "GAMER HOVER \nTOTAL DE PONTOS: " << PlayerPoints ;
+		Sleep(33); // 15 fps
+	}
 }

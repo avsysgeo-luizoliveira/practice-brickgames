@@ -22,8 +22,6 @@ struct Cars
 
 };
 
-
-
 class CarCrash
 {
 protected:
@@ -39,11 +37,13 @@ public:
 
 	void show();
 
+	void GameHover();
+
 private:
 	std::vector<char> Controller = { 'A', 'D' };
 	bool SceneRunning = true;
+	bool GameStating = false;
 	COORD PlayerPosition{ 7, 10 };
 	char PlayerInput = 0x0;
-
+	int PlayerPoints = 0;
 };
-
